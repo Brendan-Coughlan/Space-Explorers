@@ -23,7 +23,7 @@ public class InteractSystem : MonoBehaviour
         Collider2D nearbyObject = Physics2D.OverlapCircle(transform.position, 1f);
         if (nearbyObject != null && nearbyObject.CompareTag("Interactable"))
         {
-            interactionPrompt.transform.position = nearbyObject.transform.position + new Vector3(0, nearbyObject.transform.localScale.y, 0);
+            interactionPrompt.transform.localPosition = transform.parent.GetChild(0).position + new Vector3(0, 0.8f, 0);
             interactionPrompt.enabled = true;
             if(interactionAction.triggered)
             {

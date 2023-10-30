@@ -13,7 +13,7 @@ public class ShipMovement : MonoBehaviour
     private void Awake()
     {
         playerInput = GetComponent<PlayerInput>();
-        movementAction = playerInput.SwitchCurrentActionMap("Ship");
+        //movementAction = playerInput.SwitchCurrentActionMap("Ship");
         shipRb = GetComponent<Rigidbody2D>();
     }
 
